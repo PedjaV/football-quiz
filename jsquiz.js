@@ -103,8 +103,6 @@ $(document).ready(function () {
 
 function displayCurrentQuestion() {
 
-    console.log("In display current Question");
-
     let question = questions[currentQuestion].question;
     let questionClass = $(document).find(".quizContainer > .question");
     let choiceList = $(document).find(".quizContainer > .choiceList");
