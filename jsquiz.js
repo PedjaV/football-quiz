@@ -117,7 +117,7 @@ function displayCurrentQuestion() {
     let choice;
     for (i = 0; i < numChoices; i++) {
         choice = questions[currentQuestion].choices[i];
-        $('<li id="lista"><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
+        $('<li id="lista"><input id="ime" type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
     }
 }
 
