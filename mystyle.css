@@ -29,8 +29,8 @@ p {
     font-family:'Rokkitt', serif;
 }
 
- .quizContainer {
-    opacity: 0.9;
+ #quizContainer {
+    opacity: 0#9;
     background-color:#000398; 
     border-radius: 8px;
     width: 75%;
@@ -39,7 +39,7 @@ p {
     padding-top: 5px;
     position: relative;
 }
-.nextButton {
+#nextButton {
     
     border-radius: 6px;
     width: 150px;
@@ -55,7 +55,7 @@ p {
     padding-top: 20px;
     cursor: pointer;
 }
-.question {
+#question {
     font-family:'Rokkitt', serif;
     font-size: 2em;
     width: 90%;
@@ -66,7 +66,7 @@ p {
     text-align: center;
 	color:#27a63;
 }
-.quizMessage {
+#quizMessage {
     background-color: peachpuff;
     border-radius: 6px;
     width: 30%;
@@ -76,11 +76,11 @@ p {
     font-family:'Rokkitt', serif;
     color: red;
 }
-.choiceList {
+#choiceList {
     font-family: Courier, serif;
     color: blueviolet;
 }
-.result {
+#result {
     width: 30%;
     height: auto;;
     border-radius: 6px;

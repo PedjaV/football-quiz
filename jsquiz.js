@@ -61,20 +61,20 @@ $(document).ready(function () {
 
     
     displayCurrentQuestion();
-    $(this).find(".quizMessage").hide();
+    $(this).find("#quizMessage").hide();
 
     
-    $(this).find(".nextButton").on("click", function () {
+    $(this).find("#nextButton").on("click", function () {
         if (!quizOver) {
 
             value = $("input[type='radio']:checked").val();
 
             if (value == undefined) {
-                $(document).find(".quizMessage").text("Please select an answer");
-                $(document).find(".quizMessage").show();
+                $(document).find("#quizMessage").text("Please select an answer");
+                $(document).find("#quizMessage").show();
             } else {
                 
-                $(document).find(".quizMessage").hide();
+                $(document).find("#quizMessage").hide();
 
                 if (value == questions[currentQuestion].correctAnswer) {
                     correctAnswers++;
@@ -85,13 +85,13 @@ $(document).ready(function () {
                     displayCurrentQuestion();
                 } else {
                     displayScore();
-                    $(document).find(".nextButton").text("Play Again?");
+                    $(document).find("#nextButton").text("Play Again?");
                     quizOver = true;
                 }
             }
         } else {
             quizOver = false;
-            $(document).find(".nextButton").text("Next Question");
+            $(document).find("#nextButton").text("Next Question");
             resetQuiz();
             displayCurrentQuestion();
             hideScore();
@@ -104,8 +104,8 @@ $(document).ready(function () {
 function displayCurrentQuestion() {
 
     let question = questions[currentQuestion].question;
-    let questionClass = $(document).find(".quizContainer > .question");
-    let choiceList = $(document).find(".quizContainer > .choiceList");
+    let questionClass = $(document).find("#quizContainer > #question");
+    let choiceList = $(document).find("#quizContainer > #choiceList");
     let numChoices = questions[currentQuestion].choices.length;
 
     
@@ -128,10 +128,10 @@ function resetQuiz() {
 }
 
 function displayScore() {
-    $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
-    $(document).find(".quizContainer > .result").show();
+    $(document).find("#quizContainer > #result").text("You scored: " + correctAnswers + " out of: " + questions.length);
+    $(document).find("#quizContainer > #result").show();
 }
 
 function hideScore() {
-    $(document).find(".result").hide();
+    $(document).find("#result").hide();
 }
