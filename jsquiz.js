@@ -107,7 +107,6 @@ function displayCurrentQuestion() {
     let questionClass = $(document).find("#quizContainer > #question");
     let choiceList = $(document).find("#quizContainer > #choiceList");
     let numChoices = questions[currentQuestion].choices.length;
-
     
     $(questionClass).text(question);
 
@@ -117,7 +116,8 @@ function displayCurrentQuestion() {
     let choice;
     for (i = 0; i < numChoices; i++) {
         choice = questions[currentQuestion].choices[i];
-        $('<li id="lista"><input id="ime" type="radio" value=' + [i] + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
+        
+        $('<li id="lista"><input id="ime" type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
     }
 }
 
